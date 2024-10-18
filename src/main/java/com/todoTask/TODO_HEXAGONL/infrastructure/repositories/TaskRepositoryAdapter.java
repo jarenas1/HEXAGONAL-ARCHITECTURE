@@ -69,4 +69,4 @@ public class TaskRepositoryAdapter implements TaskRepositoryPort {
         return true;
     }
     }
-}
+
