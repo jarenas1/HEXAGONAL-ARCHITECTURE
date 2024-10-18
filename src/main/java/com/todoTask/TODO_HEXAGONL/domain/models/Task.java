@@ -5,7 +5,7 @@ import jakarta.persistence.Id;
 import java.time.LocalDateTime;
 
 public class Task {
-    @Id
+
     private Long id;
 
     private String title;

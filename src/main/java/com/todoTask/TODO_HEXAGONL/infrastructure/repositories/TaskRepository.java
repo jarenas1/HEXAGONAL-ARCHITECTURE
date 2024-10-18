@@ -1,4 +1,8 @@
 package com.todoTask.TODO_HEXAGONL.infrastructure.repositories;
 
-public interface TaskRepository {
+import com.todoTask.TODO_HEXAGONL.infrastructure.entities.TaskEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+//REPO QUE ALIMENTARA
+public interface TaskRepository extends JpaRepository<TaskEntity,Long> {
 }
