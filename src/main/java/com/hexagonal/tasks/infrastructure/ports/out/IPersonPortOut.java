@@ -5,7 +5,7 @@ import com.hexagonal.tasks.domain.model.Person;
 import java.util.List;
 import java.util.Optional;
 
-public interface IPeronPortOut {
+public interface IPersonPortOut {
     Optional<Person> findPersonById(Long id);
     Person save(Person person);
     Person update(Person person);
