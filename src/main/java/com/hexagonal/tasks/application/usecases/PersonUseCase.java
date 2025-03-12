@@ -1,5 +1,6 @@
 package com.hexagonal.tasks.application.usecases;
 
+import com.hexagonal.tasks.domain.dto.request.CreateUserWOId;
 import com.hexagonal.tasks.domain.model.Person;
 import com.hexagonal.tasks.infrastructure.adapters.out.persistence.PersonAdapterOut;
 import com.hexagonal.tasks.infrastructure.ports.in.IPersonPortIn;
@@ -18,15 +19,17 @@ public class PersonUseCase implements IPersonPortIn {
         this.personPort = personPort;
     }
 
+
     @Override
-    public Optional<Person> findPersonById(Long id) {
-        return Optional.empty();
+    public Person findPersonById(Long id) {
+        return null;
     }
 
     @Override
-    public Person save(Person person) {
+    public Person save(CreateUserWOId person) {
         return null;
     }
+
 
     @Override
     public Person update(Person person) {
@@ -44,7 +47,7 @@ public class PersonUseCase implements IPersonPortIn {
     }
 
     @Override
-    public Optional<Person> findPersonBycars(String plate) {
-        return Optional.empty();
+    public Person findPersonBycars(String plate) {
+        return null;
     }
 }

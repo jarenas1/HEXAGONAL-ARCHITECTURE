@@ -1,15 +1,16 @@
 package com.hexagonal.tasks.infrastructure.ports.in;
 
+import com.hexagonal.tasks.domain.dto.request.CreateUserWOId;
 import com.hexagonal.tasks.domain.model.Person;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface IPersonPortIn {
-    Optional<Person> findPersonById(Long id);
-    Person save(Person person);
+    Person findPersonById(Long id);
+    Person save(CreateUserWOId person);
     Person update(Person person);
     void deleteById(Long id);
     List<Person> findAll();
-    Optional<Person> findPersonBycars(String plate);
+    Person findPersonBycars(String plate);
 }
