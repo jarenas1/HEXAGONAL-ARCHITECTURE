@@ -15,8 +15,10 @@ public class Car {
 
     @NotNull
     private String model;
-//    @ManyToOne
-//    @JoinColumn(name = "owner_id")
+
+    @NotNull
+     private String plate;
+
     @NotNull
     private Person owner;
 }

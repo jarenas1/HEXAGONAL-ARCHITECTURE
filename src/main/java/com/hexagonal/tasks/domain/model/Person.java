@@ -19,7 +19,7 @@ public class Person {
     @NotNull
     @Min(3)
     private String name;
-//    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL, orphanRemoval = true)
+
     @NotNull
     private List<Car> cars;
 }
