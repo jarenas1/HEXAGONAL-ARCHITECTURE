@@ -8,7 +8,6 @@ import java.util.Optional;
 public interface IPersonPortOut {
     Optional<Person> findPersonById(Long id);
     Person save(Person person);
-    Person update(Person person);
     void deleteById(Long id);
     List<Person> findAll();
     Optional<Person> findPersonBycars(String plate);

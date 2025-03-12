@@ -10,7 +10,7 @@ import lombok.Data;
 @Builder
 @Data
 public class Car {
-    @NotNull
+
     private Long id;
 
     @NotNull

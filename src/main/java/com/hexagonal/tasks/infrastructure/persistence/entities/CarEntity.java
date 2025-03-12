@@ -17,7 +17,6 @@ import org.hibernate.validator.constraints.ISBN;
 @AllArgsConstructor
 public class CarEntity {
 
-    @NotNull
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

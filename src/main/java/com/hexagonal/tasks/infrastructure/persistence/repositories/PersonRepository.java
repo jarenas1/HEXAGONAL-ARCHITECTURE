@@ -10,5 +10,5 @@ import java.util.List;
 import java.util.Optional;
 
 public interface PersonRepository extends JpaRepository<PersonEntity, Long> {
-    Optional<Person> findByCarsPlate(@NotNull String cars_plate);
+    Optional<PersonEntity> findByCarsPlate(@NotNull String cars_plate);
 }
