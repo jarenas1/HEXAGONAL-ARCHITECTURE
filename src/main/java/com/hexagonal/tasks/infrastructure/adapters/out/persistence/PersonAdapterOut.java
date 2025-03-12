@@ -7,10 +7,12 @@ import com.hexagonal.tasks.domain.exceptions.UserNotFoundException;
 import com.hexagonal.tasks.domain.model.Person;
 import com.hexagonal.tasks.infrastructure.persistence.repositories.PersonRepository;
 import com.hexagonal.tasks.infrastructure.ports.out.IPersonPortOut;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
 
+@Component
 public class PersonAdapterOut implements IPersonPortOut {
 
     private final PersonRepository personRepository;
