@@ -27,13 +27,13 @@ public class PersonAdapterOut implements IPersonPortOut {
 
     @Override
     public Optional<Person> findPersonById(Long id) {
-        return Optional.of(personMapper.toPerson(this.personRepository.findById(id).orElseThrow( () -> new UserNotFoundException())));
+        return Optional.ofNullable(personMapper.toPerson(this.personRepository.findById(id).get()));
     }
 
     @Override
     public Person save(Person person) {
         return personMapper.toPerson(this.personRepository.save(personMapper.toPersonEntity(person)));
-    }
+}
 
     @Override
     public void deleteById(Long id) {
