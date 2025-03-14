@@ -8,7 +8,6 @@ import java.util.List;
 public interface ICarPortOut {
     Car findCarById(Long id);
     Car save(Car car);
-    Car update(Car car);
     void deleteById(Long id);
     List<Car> findAll();
 }
