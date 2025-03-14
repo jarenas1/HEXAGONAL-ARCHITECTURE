@@ -1,19 +1,25 @@
-package com.hexagonal.tasks.application.usecases;
+package com.hexagonal.tasks.infrastructure.adapters.out.persistence;
 
-import com.hexagonal.tasks.domain.dto.request.CreateCarWOid;
 import com.hexagonal.tasks.domain.model.Car;
-import com.hexagonal.tasks.infrastructure.ports.in.ICarPortIn;
+import com.hexagonal.tasks.infrastructure.ports.out.ICarPortOut;
 
 import java.util.List;
 
-public class CarUseCases implements ICarPortIn {
+public class CarAdapterOut implements ICarPortOut {
+
+    private final Car car;
+
+    public CarAdapterOut(Car car) {
+        this.car = car;
+    }
+
     @Override
     public Car findCarById(Long id) {
         return null;
     }
 
     @Override
-    public Car save(CreateCarWOid car) {
+    public Car save(Car car) {
         return null;
     }
 
