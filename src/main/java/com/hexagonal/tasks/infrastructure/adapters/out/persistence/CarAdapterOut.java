@@ -7,6 +7,7 @@ import com.hexagonal.tasks.infrastructure.persistence.repositories.CarRepository
 import com.hexagonal.tasks.infrastructure.ports.out.ICarPortOut;
 
 import java.util.List;
+import java.util.Optional;
 
 public class CarAdapterOut implements ICarPortOut {
 
@@ -20,8 +21,8 @@ public class CarAdapterOut implements ICarPortOut {
     }
 
     @Override
-    public Car findCarById(Long id) {
-        return carMapper.toCar(carRepository.findById(id).orElseThrow(() -> new CarNotFounException("Car not found")));
+    public Optional<Car> findCarById(Long id) {
+        return Optional.ofNullable(carMapper.toCar(carRepository.findById(id).get()));
     }
 
     @Override
