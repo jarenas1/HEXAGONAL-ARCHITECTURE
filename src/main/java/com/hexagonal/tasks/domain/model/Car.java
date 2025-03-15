@@ -17,12 +17,9 @@ public class Car {
 
     private Long id;
 
-    @NotNull
     private String model;
 
-    @NotNull
      private String plate;
 
-    @NotNull
     private Person owner;
 }

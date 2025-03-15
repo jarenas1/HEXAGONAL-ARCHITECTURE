@@ -5,10 +5,12 @@ import com.hexagonal.tasks.domain.exceptions.CarNotFounException;
 import com.hexagonal.tasks.domain.model.Car;
 import com.hexagonal.tasks.infrastructure.persistence.repositories.CarRepository;
 import com.hexagonal.tasks.infrastructure.ports.out.ICarPortOut;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
 
+@Component
 public class CarAdapterOut implements ICarPortOut {
 
 

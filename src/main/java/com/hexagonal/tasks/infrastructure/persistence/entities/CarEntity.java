@@ -21,14 +21,11 @@ public class CarEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
     private String model;
 
-    @NotNull
     private String plate;
     @ManyToOne
 
     @JoinColumn(name = "owner_id")
-    @NotNull
     private PersonEntity owner;
 }

@@ -3,14 +3,18 @@ package com.hexagonal.tasks.infrastructure.adapters.in.controllers;
 import com.hexagonal.tasks.domain.dto.request.CreateCarWOid;
 import com.hexagonal.tasks.domain.model.Car;
 import com.hexagonal.tasks.infrastructure.ports.in.ICarPortIn;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@RestController
+@RequestMapping("/api/v1/cars")
 public class CarControllerAdapterIN {
 
     private final ICarPortIn carPort;
+
 
     public CarControllerAdapterIN(ICarPortIn carPort) {
         this.carPort = carPort;

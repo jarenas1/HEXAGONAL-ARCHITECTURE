@@ -18,17 +18,15 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PersonEntity {
-    @NotNull
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotNull
-    @Min(3)
+
     private String name;
 
     @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL, orphanRemoval = true)
-    @NotNull
     private List<CarEntity> cars;
 
 }

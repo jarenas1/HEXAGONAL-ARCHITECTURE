@@ -10,6 +10,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Builder
@@ -17,13 +18,9 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Person {
-    @NotNull
     private Long id;
 
-    @NotNull
-    @Min(3)
     private String name;
 
-    @NotNull
-    private List<Car> cars;
+    private List<Car> cars = new ArrayList<>();
 }

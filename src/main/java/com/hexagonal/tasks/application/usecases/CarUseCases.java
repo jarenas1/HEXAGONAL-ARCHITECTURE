@@ -6,9 +6,11 @@ import com.hexagonal.tasks.domain.model.Car;
 import com.hexagonal.tasks.infrastructure.adapters.out.persistence.CarAdapterOut;
 import com.hexagonal.tasks.infrastructure.ports.in.ICarPortIn;
 import com.hexagonal.tasks.infrastructure.ports.out.ICarPortOut;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CarUseCases implements ICarPortIn {
 
     private final ICarPortOut carPort;
